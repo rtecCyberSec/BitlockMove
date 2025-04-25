@@ -17,7 +17,7 @@ In this PoC, the CLSID `ab93b6f1-be76-4185-a488-a9001b105b94` - BDEUILauncher Cl
 
 <br>
 <div align="center">
-    <img src="https://github.com/rtecCyberSec/BitlockMove/images/BaaUpdate.png" width="500">
+    <img src="https://github.com/rtecCyberSec/BitlockMove/blob/main/images/BaaUpdate.png?raw=true" width="500">
 </div>
 <br>
 
@@ -26,7 +26,7 @@ The CLSID `A7A63E5C-3877-4840-8727-C1EA9D7A4D50` is trying to be loaded, which w
 
 <br>
 <div align="center">
-    <img src="https://github.com/rtecCyberSec/BitlockMove/images/BAAClsid.png" width="500">
+    <img src="https://github.com/rtecCyberSec/BitlockMove/blob/main/images/BAAClsid.png?raw=true" width="500">
 </div>
 <br>
 
@@ -42,7 +42,7 @@ BitlockMove.exe mode=enum target=<targetHost>
 
 <br>
 <div align="center">
-    <img src="https://github.com/rtecCyberSec/BitlockMove/images/BitlockMoveEnum.png" width="500">
+    <img src="https://github.com/rtecCyberSec/BitlockMove/blob/main/images/BitlockMoveEnum.png?raw=true" width="500">
 </div>
 <br>
 
@@ -56,7 +56,7 @@ BitlockMove.exe mode=attack target=<targetHost> dllpath=C:\windows\temp\pwned.dl
 
 <br>
 <div align="center">
-    <img src="https://github.com/rtecCyberSec/BitlockMove/images/BitlockMovePoC.png" width="500">
+    <img src="https://github.com/rtecCyberSec/BitlockMove/blob/main/images/BitlockMovePoC.png?raw=true" width="500">
 </div>
 <br>
 
