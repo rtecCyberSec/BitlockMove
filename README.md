@@ -68,4 +68,5 @@ With a custom DLL you will also live in a trusted signed process instead of spaw
 Behavior based detection of this technique can be done by checking for
 1) Remote COM Hijack of the mentioned CLSID followed by
 2) `BaaUpdate.exe` loading a newly dropped DLL from the hijack location
+3) `BaaUpdate.exe` spawning suspicious sub-processes
 
