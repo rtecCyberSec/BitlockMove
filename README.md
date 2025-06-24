@@ -2,7 +2,7 @@
 
 Lateral Movement via Bitlocker DCOM & COM Hijacking.
 
-This Proof of Concept (PoC) for Lateral Movement abuses the fact, that some COM objects configured as `INTERACTIVE USER` will spawn a process in the context of the currently logged on users session.
+This Proof of Concept (PoC) for Lateral Movement abuses the fact, that some COM Classes configured as `INTERACTIVE USER` will spawn a process in the context of the currently logged on users session.
 
 If those processes are also vulnerable to COM Hijacking, we can configure a COM Hijack via the remote registry, drop a malicious DLL via SMB and trigger loading/execution of this DLL via DCOM.
 
