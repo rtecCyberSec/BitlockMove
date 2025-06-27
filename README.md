@@ -30,7 +30,7 @@ The CLSID `A7A63E5C-3877-4840-8727-C1EA9D7A4D50` is trying to be loaded, which w
 </div>
 <br>
 
-As this CLSID is related to Bitlocker, it can only be found on Client systems. Therefore, this PoC only allows Lateral Movement on Client systems, not on Servers.
+As this CLSID is related to Bitlocker, it can mainly be found on Client systems. Therefore, this PoC mainly allows Lateral Movement on Client systems, not on Servers (because by default Bitlocker is disabled there).
 
 # Enum Mode
 
